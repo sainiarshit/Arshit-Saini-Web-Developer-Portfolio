@@ -1,0 +1,1378 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arshit Saini</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+    <style>
+        
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #000; /* Changed to black */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        h2, h3, h4 {
+            color: #333;
+            margin: 10px 0;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        /* List Styles */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 5px 0;
+            padding: 5px;
+            background: #f9f9f9;
+            border-radius: 4px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+
+        .footer-about, .footer-links, .footer-social {
+            margin: 10px;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-links ul {
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin: 5px 0;
+        }
+
+        .footer-bottom {
+            background-color: #222;
+            padding: 10px 0;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Social Media Icons */
+        .footer-social a {
+            margin: 0 10px;
+            color: white;
+            font-size: 1.5em;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.project-card a {
+    color: white;
+    background: #4CAF50;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+    background-color: #388E3C;
+}
+.navbar {
+    margin-top: 15px;
+}
+
+.navbar a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    border-bottom: 2px solid #4CAF50;
+}
+
+.navbar a.active {
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+}
+html {
+    scroll-behavior: smooth;
+}
+.profile-photo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        margin-bottom: 20px;
+        transition: transform 0.4s ease;
+    }
+
+    .profile-photo:hover {
+        transform: scale(1.05) rotate(2deg);
+    }
+
+    /* Animation for resume button */
+    .resume-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .resume-btn:hover {
+        background-color: #388E3C;
+        transform: scale(1.05);
+    }
+    .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.skill-card {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+    width: 150px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.skill-card i {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+.achievements-section {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2em;
+    color: #4CAF50;
+    margin-bottom: 30px;
+    animation: fadeInDown 1s ease forwards;
+}
+
+.achievements-section {
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+}
+
+.section-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.achievements-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.achievement-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+}
+
+.view-cert-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.view-cert-btn:hover {
+    background-color: #388E3C;
+}
+.contact-section {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 2em;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.contact-form .send-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form .send-btn:hover {
+    background-color: #388E3C;
+    transform: scale(1.05);
+}
+
+.map-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 28px;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #1ebe5d;
+}
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 15px;
+    position: fixed;
+    z-index: 9999;
+    right: 30px;
+    bottom: 30px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: visibility 0s, opacity 0.5s ease;
+    opacity: 0;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+        /* Timeline Styles */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #4CAF50;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-container.left {
+            left: 0;
+        }
+
+        .timeline-container.right {
+            left: 50%;
+        }
+
+        .timeline-container::before {
+            content: "";
+            position: absolute;
+            top: 15px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: #4CAF50;
+            border: 4px solid white;
+            z-index: 1;
+        }
+
+        .timeline-container.left::before {
+            left: -16px;
+        }
+
+        .timeline-container.right::before {
+            right: -16px;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-content h3 {
+            font-size: 1.5em;
+        }
+
+        .timeline-content p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Animation */
+        .timeline-container {
+            opacity: 0;
+            transform: translateX(50px);
+            animation: fadeInUp 0.8s forwards;
+        }
+
+        .timeline-container.left {
+            animation-delay: 0.2s;
+        }
+
+        .timeline-container.right {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 600px) {
+            .timeline-container.left,
+            .timeline-container.right {
+                width: 100%;
+                left: 0;
+            }
+
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-container::before {
+                left: 0;
+                right: auto;
+            }
+        }
+        .testimonials-section {
+  position: relative;
+  padding: 70px 20px;
+  background: url('/background.jpeg') no-repeat center center/cover;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Dark overlay for better readability */
+.testimonials-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: 1;
+}
+
+.testimonials-section * {
+  position: relative;
+  z-index: 2;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #222;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #4CAF50;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.testimonial-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transform: scale(0.95);
+  opacity: 0;
+  animation: fadeZoom 0.8s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-content p {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #111;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.testimonial-content h4 {
+  color: #333;
+  font-weight: 500;
+  text-align: right;
+}
+
+@keyframes fadeZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }
+.delay-4 { animation-delay: 1.2s; }
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+}
+/* Blog Section Styles */
+.blog-section {
+  background: black;
+  padding: 60px 20px;
+  color: white;
+  overflow: hidden;
+}
+
+
+.blog-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 20px;
+}
+
+.blog-card {
+  background: #1e1e1e;
+  min-width: 300px;
+  flex-shrink: 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  transition: transform 0.5s ease;
+  animation: slideIn 0.7s ease forwards;
+}
+
+.blog-card h3 {
+  margin-bottom: 10px;
+  color: #4CAF50;
+}
+
+.blog-card p {
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.blog-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Keyframe Animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Optional: Hide scroll bar */
+.blog-slider::-webkit-scrollbar {
+  display: none;
+}
+.blog-section {
+    background-color: #121212;
+    padding: 50px 20px;
+    color: #fff;
+    overflow: hidden;
+}
+
+.blog-heading {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #00ffe1;
+    text-shadow: 1px 1px 8px #0ff;
+}
+
+.blog-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+.blog-card {
+    flex: 0 0 auto;
+    width: 300px;
+    background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 255, 255, 0.15);
+    transition: transform 0.4s ease;
+    animation: floatCard 6s ease-in-out infinite alternate;
+}
+
+.blog-card:hover {
+    transform: scale(1.05) rotateZ(1deg);
+    box-shadow: 0 15px 30px rgba(0, 255, 255, 0.25);
+}
+
+@keyframes floatCard {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+/* Scroll trigger animation (JS handles scroll direction to auto-scroll the carousel) */
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #0f0f0f; /* dark bg for particles */
+  color: white;
+  overflow: hidden;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #0077ff;
+}
+.swiper-slide {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  color: #111;
+}
+.stars {
+  color: gold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+
+
+    </style>
+</head>
+<!-- Primary Meta Tags -->
+<title>Arshit Saini | Web Developer Portfolio</title>
+<meta name="title" content="Arshit Saini | Web Developer Portfolio">
+<meta name="description" content="Explore Arshit Saini's portfolio – showcasing web development projects, skills, blogs, and professional journey. Built with modern design and smooth animations.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://github.com/sainiarshit/Arshit-Saini-Web-Developer-Portfolio">
+<meta property="og:title" content="Arshit Saini | Web Developer Portfolio">
+<meta property="og:description" content="Explore Arshit Saini's portfolio – showcasing web development projects, skills, blogs, and professional journey.">
+<meta property="og:image" content="https://yourportfolio.com/assets/preview-image.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://github.com/sainiarshit/Arshit-Saini-Web-Developer-Portfolio">
+<meta property="twitter:title" content="Arshit Saini | Web Developer Portfolio">
+<meta property="twitter:description" content="Explore Arshit Saini's portfolio – showcasing web development projects, skills, blogs, and professional journey.">
+<meta property="twitter:image" content="https://yourportfolio.com/assets/preview-image.png">
+
+<body>
+
+    
+    
+    <!-- HERO SECTION START -->
+
+    <section class="hero-section">
+    <div id="particles-js"></div>
+    <div class="hero-content">
+      <h1>Hi, I'm Arshit Saini</h1>
+
+      <nav class="navbar">
+      <p>Education | Skills | Experience | Projects | Achievements</p>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="btn">Contact Me</a>
+      </nav>
+    </div>
+    </section>
+    <main>
+        <section id="blog" class="blog-section">
+            <div class="blog-carousel">
+                <div class="blog-card"> <h3>Mastering JavaScript</h3> <p>Understanding closures, async/await, and DOM manipulation.</p> <a href="https://techcommunity.microsoft.com/blog/educatordeveloperblog/become-a-javascript-master-essential-10-tips-for-mastery-the-language/3996356" target="-main">Read More →</a> </div>
+                
+            <div class="blog-card"> <h3>Responsive Web Design</h3> <p>Tips to make your site look perfect on every screen size.</p><a href="https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/" target="-main">Read More →</a>  </div>
+            <div class="blog-card"> <h3>Git & GitHub Crash Course</h3> <p>Version control essentials with real-world examples.</p><a href="https://www.freecodecamp.org/news/git-and-github-crash-course/" target="-main">Read More →</a> </div>
+            <div class="blog-card"> <h3>HTML/CSS Tricks</h3> <p>Hidden gems for layouts, animations, and responsiveness.</p><a href="https://www.lambdatest.com/blog/html-css-tricks/" target="-main">Read More →</a> </div>
+            <div class="blog-card"> <h3>Python for Beginners</h3> <p>Start coding with Python using fun project ideas.</p> <a href="https://draft.dev/learn/python-blogs" target="-main">Read More →</a></div>
+            <div class="blog-card"> <h3>How I Built My Portfolio</h3> <p>Step-by-step process of designing and deploying my site.</p><a href="https://blog.prototypr.io/how-i-built-my-design-portfolio-from-scratch-c9a44ec079a5" target="-main">Read More →</a> </div>
+            <div class="blog-card"> <h3>Best Resources to Learn</h3> <p>Top websites, YouTube channels, and books for devs.</p><a href="https://nleiva.medium.com/learn-go-45d4b9c177c7" target="-main">Read More →</a> </div>
+        </div>
+    </section>
+    
+      
+
+    <section id="about" style="padding: 40px; background-color: #ffffff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 30px; text-align: center;">
+
+        <!-- Profile Photo -->
+        <img src="./arshit saini.jpg" alt="Profile Photo" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; box-shadow: 0 2px 6px rgba(0,0,0,0.2); margin-bottom: 20px;">
+    
+        <!-- Resume Button -->
+        <div style="margin-bottom: 30px;">
+            <a href="./Arshit Saini.pdf" download class="resume-btn" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; transition: background 0.3s ease;">
+                ⬇ Download Resume
+            </a>
+        </div>
+    
+        <h2 style="color: #333;">About Me</h2>
+
+        
+        <p style="font-size: 1.1em; line-height: 1.6;">
+            Hi, I'm <strong>Arshit Saini</strong>, a passionate <strong>Front-End Developer</strong> and <strong>Python Programmer</strong> currently pursuing B.Tech in Computer Science (with Data Science) at B.K.B.I.E.T. Pilani. I love crafting clean, responsive websites and building interactive user experiences.
+        </p>
+    
+        <h3 style="color: #4CAF50;">Education</h3>
+        <ul style="line-height: 1.6; text-align: left; display: inline-block;">
+            <li>📘 B.Tech in Computer Science, CGPA: <strong>7.81</strong></li>
+            <li>🏫 Senior Secondary (Rakesh Academy, Pilani): <strong>73%</strong></li>
+        </ul>
+    
+        <h3 style="color: #4CAF50;">Skills</h3>
+        <ul style="line-height: 1.6; text-align: left; display: inline-block;">
+            <li>✅ HTML, CSS, JavaScript, Python</li>
+            <li>✅ UI/UX Design, Responsive Layouts</li>
+            <li>✅ GitHub, Figma, Django (Basics)</li>
+        </ul>
+    
+        <h3 style="color: #4CAF50;">Career Goals</h3>
+        <p>
+            To become a full-stack developer and work on real-world, scalable applications that solve meaningful problems.
+        </p>
+    
+        <h3 style="color: #4CAF50;">Achievements</h3>
+        <ul style="line-height: 1.6; text-align: left; display: inline-block;">
+            <li>🏅 Built 6+ mini-projects including Portfolio Website, E-Commerce UI, To-Do App</li>
+            <li>💻 Participated in coding contests & open-source contributions</li>
+        </ul>
+    
+        <h3 style="color: #4CAF50;">A Little About Me</h3>
+        <p>
+            I believe in <em>“learning by doing”</em>. Whether it's writing clean code, exploring new frameworks, or sipping chai during bug hunts — I enjoy the whole process! ☕💻
+        </p>
+    </section>
+    
+
+    <section id="skills" style="padding: 40px; background-color: #ffffff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 30px;">
+        <h2 style="text-align: center; color: black; margin-bottom: 20px;">My Skills</h2>
+
+        <div class="skills-container">
+            <div class="skill-card">
+                <i class="fab fa-html5"></i>
+                <h3>HTML5</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS3</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-js-square"></i>
+                <h3>JavaScript</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-python"></i>
+                <h3>Python</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>UI/UX Design</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-git-alt"></i>
+                <h3>Git & GitHub</h3>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="projects" style="padding: 40px; background-color: #f4f4f4;">
+        <h2 style="text-align: center; margin-bottom: 30px;">Projects</h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+    
+            <div class="project-card">
+                <h3>🌐 Portfolio Website</h3>
+                <p>A responsive and elegant portfolio built using HTML, CSS & JS to showcase skills and projects.</p>
+                <a href="/index.html" style="color: white; background: #4CAF50; padding: 8px 16px; border-radius: 6px; text-decoration: none; display: inline-block; margin-top: 10px;">View Project</a>
+            </div>
+    
+            <div class="project-card">
+                <h3>🔐 Login System</h3>
+                <p>A secure login and registration system using HTML, CSS, JavaScript and backend frameworks like Django.</p>
+                <a href="#" style="color: white; background: #4CAF50; padding: 8px 16px; border-radius: 6px; text-decoration: none; display: inline-block; margin-top: 10px;">View Project</a>
+            </div>
+    
+            <div class="project-card">
+                <h3>🛒 E-Commerce Page</h3>
+                <p>A dynamic product page featuring add-to-cart & responsive UI for an online shopping experience.</p>
+                <a href="#" style="color: white; background: #4CAF50; padding: 8px 16px; border-radius: 6px; text-decoration: none; display: inline-block; margin-top: 10px;">View Project</a>
+            </div>
+    
+            <div class="project-card">
+                <h3>📈 Stock Price Tracker</h3>
+                <p>Python-based tracker that fetches live stock data using APIs and displays trends using Matplotlib.</p>
+                <a href="#" style="color: white; background: #4CAF50; padding: 8px 16px; border-radius: 6px; text-decoration: none; display: inline-block; margin-top: 10px;">View Project</a>
+            </div>
+    
+            <div class="project-card">
+                <h3>🧠 Face Recognition</h3>
+                <p>A real-time face scanner using Python, OpenCV & Dlib for secure user authentication systems.</p>
+                <a href="#" style="color: white; background: #4CAF50; padding: 8px 16px; border-radius: 6px; text-decoration: none; display: inline-block; margin-top: 10px;">View Project</a>
+            </div>
+    
+            <div class="project-card">
+                <h3>✅ To-Do List App</h3>
+                <p>A simple productivity app built in Python to add, update & manage daily tasks effectively.</p>
+                <a href="#" style="color: white; background: #4CAF50; padding: 8px 16px; border-radius: 6px; text-decoration: none; display: inline-block; margin-top: 10px;">View Project</a>
+            </div>
+    
+        </div>
+    </section>
+
+
+    <section id="achievements" class="achievements-section">
+        <h2 class="section-title">🏅 Achievements & Certifications</h2>
+    
+        <div class="achievements-grid">
+            <div class="achievement-card">
+                <h3>📱 Built Responsive Portfolio</h3>
+                <p>Designed and developed a modern portfolio website using HTML, CSS, and JavaScript.</p>
+            </div>
+            <div class="achievement-card">
+                <h3>✅ To-Do App Project</h3>
+                <p>Built a fully functional To-Do List application using Python and file handling.</p>
+            </div>
+    
+            <div class="achievement-card">
+                <h3>📜 Front-End Developer Course</h3>
+                <p>Completed a course in Responsive Web Design on freeCodeCamp with certification.</p>
+                <a href="./certificates/frontend.pdf" class="view-cert-btn" target="_blank">View Certificate</a>
+            </div>
+    
+            <div class="achievement-card">
+                <h3>🐍 Python Training (2 Months)</h3>
+                <p>Completed hands-on training in Python, including mini-projects and logic building.</p>
+                <a href="./Certificate (005).pdf" class="view-cert-btn" target="_blank">View Certificate</a>
+            </div>
+    
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">📞 Contact Me</h2>
+        
+        <div class="contact-container">
+            <!-- Contact Form -->
+            <form class="contact-form" action="mailto:arshitsaini1@gmail.com" method="POST" enctype="text/plain">
+                <label for="name">👤 Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
+    
+                <label for="email">📧 Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+    
+                <label for="message">💬 Message:</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+    
+                <button type="submit" class="send-btn">Send Message</button>
+            </form>
+    
+            <!-- Google Map Embed -->
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3496.7090399052387!2d75.58978757537754!3d28.35858437580844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3913ec8ba1f8167d%3A0xf79eecb6b6767f75!2sPilani%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1681469572747!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="300" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+    
+
+<!-- Toast Notification -->
+<div id="toast" class="toast">📩 Message Sent Successfully!</div>
+
+<section id="timeline" style="padding: 40px 20px;">
+    <h2 style="text-align: center; margin-bottom: 30px;">Education & Career Journey</h2>
+    <div class="timeline">
+      
+      <!-- Timeline Block -->
+      <div class="timeline-container left">
+       
+        <div class="timeline-content">
+          <h3>🎓 B.Tech in CSE (Data Science)</h3>
+          <span>2022 – Present</span>
+          <p><strong>Institution:</strong> B.K. Birla Institute of Engineering & Technology(B.K.B.I.E.T.) Pilani</p>
+          <p><strong>Duration:</strong>2022-present</p>
+          <p><strong>CGPA</strong>7.52</p>
+          <p><strong>Details:</strong>Pursuing B.Tech in Computer Science with Data Science specialization. Focusing on programming languages like Python and web development.</p>
+          <img src="./logo.png" alt="Education Image" style="width: 100%; border-radius: 8px; margin-top: 15px;">
+          
+        </div>
+      </div>
+  
+      <div class="timeline-container right">
+        
+        <div class="timeline-content">
+          <h3>🏫 Senior Secondary School</h3>
+          <span>2019 – 2022</span>
+          <p><strong>Institution:</strong>Rakesh Academy, Pilani</p>
+          <p><strong>Duration:</strong>2019-2022 </p>
+        <p><strong>Standard</strong>10th and 12th</p>
+        <p><strong>Percentage</strong>10th 69.81% <br>12th 73%</p>
+        <p><strong>Details:</strong>Completed 10th with 69.81% 12th with 73%  from Rakesh Academy, Pilani with core subjects including Physics, Chemistry, Mathematics, and CS</p>
+        <img src="./logo2.png" alt="Education Image" style="width: 100%; border-radius: 8px; margin-top: 15px;">
+        </div>
+      </div>
+  
+      <div class="timeline-container left">
+        <div class="timeline-content">
+          <h3>💻 Python Training</h3>
+          <span>June – August 2024</span>
+          <p><strong>Institution:</strong>The XL Academy</p>
+          <p><strong>Duration:</strong>2 months (compleated)</p>
+          <p><strong>Details:</strong>Completed 2-month hands-on training in Python, covering basics, OOP, file handling, and small mini-projects.</p>
+          <img src="./thexlacademy_logo.jpeg" alt="Education Image" style="width: 100%; border-radius: 8px; margin-top: 15px;">
+        </div>
+      </div>
+  
+      <div class="timeline-container right">
+       
+        <div class="timeline-content">
+          <h3>🚀 First Website Deployment</h3>
+          <span>April 2025</span>
+          <p><strong>Institution:</strong>Self-Learning </p>
+          <p><strong>Details:</strong>Built and deployed my first portfolio website. Learned about hosting, domain, and responsive UI/UX principles.</p>
+          <img src="./arshit saini.jpg" alt="Education Image" style="width: 100%; border-radius: 8px; margin-top: 15px;">
+        </div>
+      </div>
+  
+    </div>
+  </section>
+
+  <!-- Swiper CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<section id="testimonials" class="testimonials-section">
+  <h2 class="section-title">What People Say</h2>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide testimonial-card">
+        <p>"Arshit is a dedicated and sincere student."</p>
+        <h4>— Prof. Nishant</h4>
+      </div>
+      <div class="swiper-slide testimonial-card">
+        <p>"He always helps others with coding doubts."</p>
+        <h4>— Komal Sharma</h4>
+      </div>
+      <div class="swiper-slide testimonial-card">
+        <p>"Exceptional dedication during Python training."</p>
+        <h4>— Mr. Vishal</h4>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+  
+    
+    <!-- Blog Section -->
+<section id="blog" class="blog-section">
+    <div class="blog-slider" id="blogSlider">
+      <!-- Blog Card -->
+      <div class="blog-card">
+        <h3>Mastering JavaScript</h3>
+        <p>A beginner's journey into JavaScript basics and async concepts.</p>
+        <a href="#">Read More →</a>
+      </div>
+      <div class="blog-card">
+        <h3>Responsive Design</h3>
+        <p>Tips for building mobile-friendly websites using Flexbox & Grid.</p>
+        <a href="#">Read More →</a>
+      </div>
+      <div class="blog-card">
+        <h3>Python Automation</h3>
+        <p>How Python scripts can save you hours every week!</p>
+        <a href="#">Read More →</a>
+      </div>
+      <!-- Add more cards as needed -->
+    </div>
+  </section>
+
+  
+    
+    
+</main>
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-about">
+            <h2>Arshit Saini</h2> <!-- Name updated -->
+            <p>Front End Developer | Python Programmer | UI Designer</p>
+        </div>
+        
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="mailto:saini.arshit12@gmail.com">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-social">
+            <h3>Connect With Me</h3>
+            <a href="https://linkedin.com/in/your-profile" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/sainiarshit" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://twitter.com/your-handle" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://facebook.com/your-page" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/saini.arshit/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 Arshit Saini | All Rights Reserved</p> <!-- Copyright updated -->
+    </div>
+    <div class="stars">
+        ★★★★☆
+      </div>
+      
+</footer>
+
+    <script>
+    window.addEventListener("scroll", () => {
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        let current = "";
+
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").includes(current)) {
+                link.classList.add("active");
+            }
+        });
+    });
+</script>
+
+<script>
+    const form = document.querySelector('.contact-form');
+    const toast = document.getElementById("toast");
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent form submission
+
+        const name = form.querySelector('input[name="name"]').value.trim();
+        const email = form.querySelector('input[name="email"]').value.trim();
+        const message = form.querySelector('textarea[name="message"]').value.trim();
+
+        if (!name || !email || !message) {
+            showToast("⚠️ Please fill in all fields!", "#f44336"); // red
+        } else {
+            showToast("📩 Message Sent Successfully!", "#4CAF50"); // green
+            form.reset(); // Clear form
+        }
+    });
+
+    function showToast(text, bgColor) {
+        toast.textContent = text;
+        toast.style.backgroundColor = bgColor;
+        toast.classList.add("show");
+
+        setTimeout(() => {
+            toast.classList.remove("show");
+        }, 3000); // 3 seconds
+    }
+</script>
+
+<script>
+let lastScroll = 0;
+window.addEventListener("scroll", () => {
+  const slider = document.getElementById("blogSlider");
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll > lastScroll) {
+    // Scroll down → move blogs left
+    slider.scrollLeft += 20;
+  } else {
+    // Scroll up → move blogs right
+    slider.scrollLeft -= 20;
+  }
+
+  lastScroll = currentScroll;
+});
+  
+    </script>
+    <script>
+        let lastScrollTop = 0;
+        window.addEventListener("scroll", function () {
+            const scrollPos = window.scrollY || document.documentElement.scrollTop;
+            const direction = scrollPos > lastScrollTop ? "down" : "up";
+            lastScrollTop = scrollPos;
+    
+            const carousel = document.querySelector(".blog-carousel");
+            if (carousel) {
+                carousel.scrollLeft += direction === "down" ? 3 : -3;
+            }
+        });
+    </script>
+    <!-- CDN for particles.js -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<!-- Particle config -->
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 90,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle"
+    },
+    "opacity": {
+      "value": 0.5
+    },
+    "size": {
+      "value": 3
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 1,
+      "direction": "none",
+      "straight": false
+    }
+  },
+  "interactivity": {
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      }
+    }
+  },
+  "retina_detect": true
+});
+</script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 4000,
+      },
+    });
+    </script>
+      
+    
+
+
+
+<a href="https://wa.me/919887499818" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
